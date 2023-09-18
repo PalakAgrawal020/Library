@@ -1,0 +1,39 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: aliceblue;
+}
+
+#heading-div {
+    padding-bottom: 3%;
+    display: flex;
+    justify-content: center;
+    padding-top: 3%;
+}
+
+p {
+    font-size: xx-large;
+    font-weight: 600;
+}
+
+hr {
+    border-color: gray;
+    border-style: dotted;
+}
+
+#body-div {
+    display:flex;
+    flex-direction: row;
+}
+
+#form-div,
+#book-div {
+    width: 50%;
+    border: 1px solid black;
+    height: 80vh;
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+}
