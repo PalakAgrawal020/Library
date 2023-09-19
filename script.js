@@ -27,3 +27,10 @@ console.log(myLibrary);
 // addBookToLibrary();
 // console.log(myLibrary);
 
+function display(array) {
+    for(let i=0; i<array.length; i++) {
+        console.log(array[i]);
+    }
+}
+
+display(myLibrary);

@@ -28,12 +28,58 @@ hr {
     flex-direction: row;
 }
 
-#form-div,
-#book-div {
+#form-div {
     width: 50%;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     height: 80vh;
     padding-top: 30px;
     display: flex;
-    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#book-div {
+    width: 50%;
+    /* border: 1px solid black; */
+    height: 80vh;
+    padding-top: 30px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+ul {
+    padding-top: 30px;
+}
+
+li {
+    list-style-type: none;
+    padding: 20px;
+}
+
+.btn{
+    padding-top: 50px;
+}
+
+label {
+    font-size: large;
+    font-weight: 600;
+    color: rgb(8, 51, 60);
+    /* padding-right: 10%; */
+}
+
+input {
+    padding: 5px 10px 5px 10px;
+    border: 1px solid gray;
+    border-radius: 3px;
+}
+
+button {
+    padding: 5px 30px 5px 30px;
+    border-radius: 3px;
+    border: 1px solid gray;
+    background-color: rgb(107, 107, 229);
+    font-size: medium;
+    font-weight: 700;
+    color: white;
 }
