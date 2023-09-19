@@ -16,6 +16,7 @@
 
     function display(array) {
         let bookList = document.getElementById('booklist');
+        bookList.textContent = '';
 
         for (let i = 0; i < array.length; i++) {
             let tr = document.createElement('tr');
@@ -32,7 +33,7 @@
             td3.textContent = array[i].pages;
             tr.appendChild(td3);
 
-            table.appendChild(tr);
+            booklist.appendChild(tr);
         }
     }
 

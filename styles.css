@@ -92,3 +92,7 @@ table {
     padding: 5px;
     width: 35vw;
 }
+
+td {
+    text-align: center;
+}
