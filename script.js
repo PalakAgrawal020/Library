@@ -1,36 +1,47 @@
-const myLibrary = [];
+// document.addEventListener("DOMContentLoaded", function() {
+    const myLibrary = [];
 
-function Book(title, author, pages) {
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-}
-
-let book1 = new Book('A', 'B', 2);
-let book2 = new Book('c', 'D', 3);
-
-myLibrary.push(book1);
-myLibrary.push(book2);
-
-console.log(myLibrary);
-
-// function addBookToLibrary() {
-//     let bookNo = prompt("Enter the number of books you want to enter");
-//     let number = parseInt(bookNo, 10);
-//     for(let i=0; i<number; i++){
-//         let newBook = new Book(prompt("Enter the title"), prompt("Enter the author"), prompt("Enter the number of pages"));
-//         myLibrary.push(newBook);
-//         alert("Book added");
-//     }
-// }
-
-// addBookToLibrary();
-// console.log(myLibrary);
-
-function display(array) {
-    for(let i=0; i<array.length; i++) {
-        console.log(array[i]);
+    function Book(title, author, pages) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
     }
-}
 
-display(myLibrary);
+    function addBookToLibrary(title, author, page) {
+        let newBook = new Book(title, author, page);
+        myLibrary.push(newBook);
+        console.log("New Book Added");
+        display(myLibrary);
+    }
+
+    function display(array) {
+        let bookList = document.getElementById('booklist');
+
+        for (let i = 0; i < array.length; i++) {
+            let tr = document.createElement('tr');
+
+            let td1 = document.createElement('td');
+            td1.textContent = array[i].title;
+            tr.appendChild(td1);
+
+            let td2 = document.createElement('td');
+            td2.textContent = array[i].author;
+            tr.appendChild(td2);
+
+            let td3 = document.createElement('td');
+            td3.textContent = array[i].pages;
+            tr.appendChild(td3);
+
+            table.appendChild(tr);
+        }
+    }
+
+    const btn = document.getElementById('select');
+
+    btn.addEventListener('click', () => {
+        let title = document.getElementById('title').value;
+        let author = document.getElementById('author').value;
+        let page = document.getElementById('page').value;
+        addBookToLibrary(title, author, page);
+    });
+// });

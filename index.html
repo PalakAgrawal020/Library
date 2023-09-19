@@ -26,14 +26,14 @@
                         </li>
                         <li>
                             <label for="author">Author</label>
-                            <input type="text" required>
+                            <input type="text" id="author" required>
                         </li>
                         <li>
                             <label for="page">Pages</label>
-                            <input type="number" required>
+                            <input type="number" id="page" required>
                         </li>
                         <li class="btn">
-                            <button>Add</button>
+                            <button id="select" type="reset">Add</button>
                         </li>
                     </ul>
                 </form>
@@ -42,6 +42,20 @@
         <div id="book-div">
             <div>
                 <h2>My Books</h2>
+            </div>
+            <div id="table">
+                <table id="bookTable">
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Author</th>
+                            <th>Pages</th>
+                        </tr>
+                    </thead>
+                    <tbody id="booklist">
+                    </tbody>
+                </table>
+            
             </div>
         </div>
     </div>

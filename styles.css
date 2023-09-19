@@ -38,6 +38,7 @@ hr {
     flex-direction: column;
 }
 
+
 #book-div {
     width: 50%;
     /* border: 1px solid black; */
@@ -61,7 +62,9 @@ li {
     padding-top: 50px;
 }
 
-label {
+label,
+th,
+td {
     font-size: large;
     font-weight: 600;
     color: rgb(8, 51, 60);
@@ -82,4 +85,10 @@ button {
     font-size: medium;
     font-weight: 700;
     color: white;
+}
+
+table {
+    border: 1px solid gray;
+    padding: 5px;
+    width: 35vw;
 }
