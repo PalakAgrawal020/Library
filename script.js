@@ -5,6 +5,7 @@ function Book(title, author, pages) {
     this.title = title;
     this.author = author;
     this.pages = pages;
+    this.read = false; 
 }
 
 function addBookToLibrary(title, author, page) {
@@ -34,14 +35,21 @@ function display(array) {
         tr.appendChild(td3);
 
         let td4 = document.createElement('td');
-        let Read = document.createElement('button');
-        Read.classList.add('read');
-        Read.textContent = 'Read';
-        let NotRead = document.createElement('button');
-        NotRead.classList.add('notRead');
-        NotRead.textContent = 'Not Read';
-        td4.appendChild(Read);
-        td4.appendChild(NotRead);
+        let readButton = document.createElement('button');
+        readButton.classList.add('read');
+        readButton.textContent = 'Read';
+        let notReadButton = document.createElement('button');
+        notReadButton.classList.add('notRead');
+        notReadButton.textContent = 'Not Read';
+
+        if (array[i].read) {
+            readButton.classList.add('readBtn');
+        } else {
+            notReadButton.classList.add('notReadBtn');
+        }
+
+        td4.appendChild(readButton);
+        td4.appendChild(notReadButton);
         tr.appendChild(td4);
 
         let td5 = document.createElement('td');
@@ -50,7 +58,7 @@ function display(array) {
         td5.appendChild(del);
         tr.appendChild(td5);
 
-        booklist.appendChild(tr);
+        bookList.appendChild(tr);
     }
 }
 
@@ -67,10 +75,31 @@ const bookList = document.getElementById('booklist');
 
 bookList.addEventListener('click', (e) => {
     if (e.target.classList.contains('read')) {
-        e.target.classList.add('readBtn');
-        e.target.nextElementSibling.classList.remove('notReadBtn');
+        const row = e.target.closest('tr');
+        const rowIndex = Array.from(row.parentNode.children).indexOf(row);
+
+        if (rowIndex >= 0) {
+            myLibrary[rowIndex].read = true;
+            display(myLibrary);
+        }
+
     } else if (e.target.classList.contains('notRead')) {
-        e.target.classList.add('notReadBtn');
-        e.target.previousElementSibling.classList.remove('readBtn');
+        const row = e.target.closest('tr');
+        const rowIndex = Array.from(row.parentNode.children).indexOf(row);
+
+        if (rowIndex >= 0) {
+            myLibrary[rowIndex].read = false;
+            display(myLibrary);
+        }
+        
+    } else if (e.target.classList.contains('delete')) {
+        const row = e.target.closest('tr');
+        const rowIndex = Array.from(row.parentNode.children).indexOf(row);
+
+        if (rowIndex >= 0) {
+            myLibrary.splice(rowIndex, 1);
+            display(myLibrary);
+        }
     }
 });
+
