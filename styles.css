@@ -119,3 +119,13 @@ table {
     background-repeat: no-repeat; 
     background-position: center; 
 }
+
+.readBtn {
+    color: antiquewhite;
+    background-color: green;
+}
+
+.notReadBtn {
+    color: antiquewhite;
+    background-color: red;
+}
