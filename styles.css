@@ -1,6 +1,7 @@
+
 * {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: aliceblue;
@@ -24,13 +25,12 @@ hr {
 }
 
 #body-div {
-    display:flex;
+    display: flex;
     flex-direction: row;
 }
 
 #form-div {
     width: 50%;
-    /* border: 1px solid black; */
     height: 80vh;
     padding-top: 30px;
     display: flex;
@@ -38,10 +38,8 @@ hr {
     flex-direction: column;
 }
 
-
 #book-div {
     width: 50%;
-    /* border: 1px solid black; */
     height: 80vh;
     padding-top: 30px;
     display: flex;
@@ -58,7 +56,7 @@ li {
     padding: 20px;
 }
 
-.btn{
+.btn {
     padding-top: 50px;
 }
 
@@ -68,17 +66,17 @@ td {
     font-size: large;
     font-weight: 600;
     color: rgb(8, 51, 60);
-    /* padding-right: 10%; */
+    text-align: center;
 }
 
 input {
-    padding: 5px 10px 5px 10px;
+    padding: 5px 10px;
     border: 1px solid gray;
     border-radius: 3px;
 }
 
 button {
-    padding: 5px 30px 5px 30px;
+    padding: 5px 30px;
     border-radius: 3px;
     border: 1px solid gray;
     background-color: rgb(107, 107, 229);
@@ -87,12 +85,37 @@ button {
     color: white;
 }
 
+#table {
+    padding-top: 30px;
+}
+
 table {
     border: 1px solid gray;
     padding: 5px;
-    width: 35vw;
+    width: 45vw;
+    border-collapse: separate;
+    border-spacing: 20px;
 }
 
-td {
-    text-align: center;
+
+.read,
+.notRead {
+    padding: 5px 15px;
+    border-radius: 3px;
+    border: 1px solid gray;
+    background-color: antiquewhite;
+    color: black;
+    font-size: small;
+    font-weight: 700;
+}
+
+.delete {
+    width: 25px; 
+    height: 25px;
+    padding: 0; 
+    border: none; 
+    background-image: url('trash-icon.png');
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center; 
 }

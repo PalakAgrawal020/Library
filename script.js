@@ -1,4 +1,4 @@
-// document.addEventListener("DOMContentLoaded", function() {
+
     const myLibrary = [];
 
     function Book(title, author, pages) {
@@ -33,6 +33,23 @@
             td3.textContent = array[i].pages;
             tr.appendChild(td3);
 
+            let td4 = document.createElement('td');
+            let Read = document.createElement('button');
+            Read.classList.add('read');
+            Read.textContent = 'Read';
+            let NotRead = document.createElement('button');
+            NotRead.classList.add('notRead');
+            NotRead.textContent = 'Not Read';
+            td4.appendChild(Read);
+            td4.appendChild(NotRead);
+            tr.appendChild(td4);
+
+            let td5 = document.createElement('td');
+            let del = document.createElement('button');
+            del.classList.add('delete');
+            td5.appendChild(del);
+            tr.appendChild(td5);
+
             booklist.appendChild(tr);
         }
     }
@@ -45,4 +62,3 @@
         let page = document.getElementById('page').value;
         addBookToLibrary(title, author, page);
     });
-// });
